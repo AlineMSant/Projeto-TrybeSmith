@@ -8,6 +8,13 @@ async function create(req: Request, res: Response) {
   res.status(201).json(response.data);
 }
 
+async function findAll(req: Request, res: Response) {
+  const response = await productService.findAll();
+
+  res.status(200).json(response.data);
+}
+
 export default {
   create,
+  findAll,
 };
