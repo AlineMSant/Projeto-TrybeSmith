@@ -11,7 +11,17 @@ const returnCreateProduct = {
   "orderId": 4
 }
 
+const returnAllProducts = [
+  {
+    "id": 1,
+    "name": "Excalibur",
+    "price": "10 peças de ouro",
+    "orderId": 1
+  }
+]
+
 export default {
   validProductBody,
   returnCreateProduct,
+  returnAllProducts,
 }
