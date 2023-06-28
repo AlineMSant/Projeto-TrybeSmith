@@ -13,15 +13,13 @@ async function findAll(): Promise<ServiceResponse<ReturnAllOrders[]>> {
     },
   });
 
-  // console.log(orders);
+  // console.log(orders[0].dataValues.productIds);
 
   const ordersCorrect = orders.map((order) => ({
     id: order.dataValues.id,
     userId: order.dataValues.userId,
     productIds: order.dataValues.productIds?.map((product) => product.id),
   }));
-
-  console.log(ordersCorrect);
 
   return { status: 'SUCCESSFUL', data: ordersCorrect };
 }
